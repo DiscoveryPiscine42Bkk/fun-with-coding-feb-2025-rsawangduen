@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table</title>
+    <style>
+        /* การตั้งค่าพื้นฐานสำหรับตาราง */
+        table {
+            width: 100%; /* ให้ตารางขยายเต็มความกว้างของหน้า */
+            table-layout: fixed; /* ใช้ table layout แบบ fixed เพื่อให้ตารางปรับขนาดได้ง่าย */
+            border-collapse: collapse; /* ทำให้ขอบเซลล์รวมกัน */
+            margin: 0;
+            padding: 0;
+        }
+
+        td {
+            padding: 20px; /* เพิ่มระยะห่างในเซลล์ */
+            text-align: left; /* จัดข้อความให้ตรงกลาง */
+            height: 200px; /* กำหนดความสูงเซลล์ */
+            border: 2px solid black; /* เพิ่มขอบเซลล์ */
+        }
+
+        /* การตั้งค่าให้มีพื้นหลังที่แตกต่างกันในแต่ละเซลล์ */
+        td:first-child {
+            background-color: #c2bc64; /* สีพื้นหลังของเซลล์ที่ 1 */
+        }
+
+        td:last-child {
+            background-color: #68d38c; /* สีพื้นหลังของเซลล์ที่ 2 */
+        }
+
+        /* ทำให้หน้าเว็บครอบตารางทั้งหมด */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            background-color: #f0f0f0;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- ตัวห่อหุ้มตาราง -->
+    <div class="table-container">
+        <table>
+            <tr>
+                <td>YELLO Cell</td>
+                <td>GREEN Cell</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

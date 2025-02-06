@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Two Boxes</title>
+    <style>
+        /* การตั้งค่า CSS สำหรับตาราง */
+        table {
+            width: 100%; /* ทำให้ตารางขยายเต็มความกว้างของหน้า */
+            border-collapse: collapse; /* รวมขอบของเซลล์ในตาราง */
+        }
+
+        /* การตั้งค่าขอบเซลล์ในตาราง */
+        td {
+            padding: 0; /* กำจัดช่องว่างภายในเซลล์ */
+            text-align: start; /* จัดตำแหน่งข้อความให้อยู่กลาง */
+            height: 200px; /* กำหนดความสูงของเซลล์ */
+            border: 2px solid black; /* เพิ่มขอบสีดำให้กับเซลล์ */
+        }
+
+        /* การตั้งค่าของกล่องในเซลล์ */
+        .box1, .box2 {
+            height: 100%; /* ใช้ความสูงเต็มเซลล์ */
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+        }
+
+        /* กล่องที่ 1 */
+        td:first-child {
+            background-color: #c2bc64; /* สีพื้นหลังของเซลล์ที่ 1 */
+        }
+
+        /* กล่องที่ 2 */
+        td:last-child {
+            background-color: #68d38c; /* สีพื้นหลังของเซลล์ที่ 2 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ตาราง -->
+    <table>
+        <tr>
+            <!-- กล่องที่ 1 -->
+            <td>
+                <div class="box1">YELLO Cell</div>
+            </td>
+            <!-- กล่องที่ 2 -->
+            <td>
+                <div class="box2">GREEN Cell</div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
