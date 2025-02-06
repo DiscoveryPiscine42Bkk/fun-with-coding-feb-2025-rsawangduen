@@ -1,0 +1,62 @@
+/* รีเซ็ตค่าพื้นฐาน */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #f4e1c6; /* สีพื้นหลังคล้ายขนมปัง */
+    font-family: Arial, sans-serif;
+}
+
+/* กล่องเมนู */
+.sandwich-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* ปุ่มเมนู */
+.menu-button {
+    background: linear-gradient(to bottom, #f4d03f, #e2b607); /* สีเหลืองคล้ายชีส */
+    border: 2px solid #c49c48; /* สีขอบเหมือนขนมปัง */
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* เมนู Drop-down */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff5d6; /* สีขนมปัง */
+    border-radius: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    display: none; /* ซ่อนเมนูไว้ก่อน */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+}
+
+/* รายการเมนู */
+.dropdown li {
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #d8b56b; /* ขอบบางๆ */
+    cursor: pointer;
+}
+
+/* เปลี่ยนสีเมื่อเอาเมาส์ไปชี้ */
+.dropdown li:hover {
+    background: linear-gradient(to right, #f4d03f, #e2b607);
+    color: white;
+}
+
+/* แสดงเมนูเมื่อโฮเวอร์ */
+.sandwich-menu:hover .dropdown {
+    display: block;
+}

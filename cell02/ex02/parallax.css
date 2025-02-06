@@ -1,0 +1,45 @@
+ /* Set up body and page structure */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the Parallax sections */
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://1000logos.net/wp-content/uploads/2024/08/The-Powerpuff-Girls-Logo-500x281.png'); /* Replace with your first image */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    color: rgb(248, 246, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section2 {
+    background-image: url('https://mmc.tirto.id/image/otf/970x0/2020/08/25/power-puff-girl_ratio-16x9.jpg'); /* Replace with your second image */
+    background-size: contain;  
+}
+
+/* Center the message */
+.centered-message {
+    font-size: 2em;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Style for the black block */
+.pink-block {
+    background-color: rgb(247, 103, 223);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pink-message {
+    font-size: 2em;
+}

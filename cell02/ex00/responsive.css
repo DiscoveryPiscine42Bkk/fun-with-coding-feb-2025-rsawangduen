@@ -1,0 +1,49 @@
+/* ตั้งค่าหน้าเว็บให้ไม่มี margin/padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* ทำให้ตารางคลุมพื้นที่ทั้งหมดของหน้าเว็บ */
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ให้ตารางสูงเท่ากับขนาดของหน้าจอ */
+    width: 100%;
+    overflow: auto; /* หากหน้าจอเล็กกว่าตาราง สามารถเลื่อนได้ */
+}
+
+table {
+    width: 100%; /* ทำให้ตารางเต็มพื้นที่ */
+    height: 100%;
+    table-layout: fixed; /* ปรับขนาดเซลล์อัตโนมัติ */
+    border-collapse: collapse; /* รวมขอบเซลล์ให้เป็นเส้นเดียวกัน */
+}
+
+td {
+    padding: 20px;
+    text-align: left; /* ให้ข้อความอยู่ซ้าย */
+    vertical-align: top; /* ให้ข้อความอยู่ด้านบน */
+    border: 3px solid black; /* ใส่ขอบตาราง */
+}
+
+/* สีพื้นหลังของแต่ละเซลล์ */
+td:first-child {
+    background-color: #c2bc64;
+}
+
+td:last-child {
+    background-color: #68d38c;
+}
+
+/* ทำให้ตารางย่อขนาดเมื่อหน้าจอเล็กลง */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px; /* ลดขนาดฟอนต์ */
+    }
+    td {
+        padding: 10px;
+    }
+}
