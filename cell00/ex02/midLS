@@ -1,0 +1,1 @@
+﻿(Get-ChildItem -Name | Where-Object { -Not $_.StartsWith('.') }) -join ', '
