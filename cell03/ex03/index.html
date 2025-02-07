@@ -6,45 +6,28 @@
     <title>To-Do List</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
             font-family: Arial, sans-serif;
-        }
-        #new-button {
-            padding: 10px 20px;
-            background-color: #f07878;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin-bottom: 20px;
-        }
-        #new-button:hover {
-            background-color: #5e1a1a;
+            text-align: center;
         }
         #ft_list {
-            width: 300px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #f9f9f9;
+            margin-top: 20px;
         }
-        .todo-item {
-            background-color: #e0e0e0;
-            margin: 5px 0;
+        .todo {
             padding: 10px;
-            border-radius: 3px;
+            margin: 5px;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
-
-    <button id="new-button">New</button>
+    <button onclick="addTodo()">New</button>
     <div id="ft_list"></div>
-
     <script src="todo.js"></script>
-
 </body>
 </html>
