@@ -1,49 +1,33 @@
-/* ตั้งค่าหน้าเว็บให้ไม่มี margin/padding */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-/* ทำให้ตารางคลุมพื้นที่ทั้งหมดของหน้าเว็บ */
-.table-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* ให้ตารางสูงเท่ากับขนาดของหน้าจอ */
-    width: 100%;
-    overflow: auto; /* หากหน้าจอเล็กกว่าตาราง สามารถเลื่อนได้ */
-}
-
+/* การตั้งค่า CSS สำหรับตาราง */
 table {
-    width: 100%; /* ทำให้ตารางเต็มพื้นที่ */
-    height: 100%;
-    table-layout: fixed; /* ปรับขนาดเซลล์อัตโนมัติ */
-    border-collapse: collapse; /* รวมขอบเซลล์ให้เป็นเส้นเดียวกัน */
+    width: 100%; /* ทำให้ตารางขยายเต็มความกว้างของหน้า */
+    border-collapse: collapse; /* รวมขอบของเซลล์ในตาราง */
 }
 
+/* การตั้งค่าขอบเซลล์ในตาราง */
 td {
-    padding: 20px;
-    text-align: left; /* ให้ข้อความอยู่ซ้าย */
-    vertical-align: top; /* ให้ข้อความอยู่ด้านบน */
-    border: 3px solid black; /* ใส่ขอบตาราง */
+    padding: 0; /* กำจัดช่องว่างภายในเซลล์ */
+    text-align: start; /* จัดตำแหน่งข้อความให้อยู่กลาง */
+    height: 200px; /* กำหนดความสูงของเซลล์ */
+    border: 2px solid black; /* เพิ่มขอบสีดำให้กับเซลล์ */
 }
 
-/* สีพื้นหลังของแต่ละเซลล์ */
+/* การตั้งค่าของกล่องในเซลล์ */
+.box1, .box2 {
+    height: 100%; /* ใช้ความสูงเต็มเซลล์ */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+/* กล่องที่ 1 */
 td:first-child {
-    background-color: #c2bc64;
+    background-color: #c2bc64; /* สีพื้นหลังของเซลล์ที่ 1 */
 }
 
+/* กล่องที่ 2 */
 td:last-child {
-    background-color: #68d38c;
-}
-
-/* ทำให้ตารางย่อขนาดเมื่อหน้าจอเล็กลง */
-@media (max-width: 600px) {
-    table {
-        font-size: 14px; /* ลดขนาดฟอนต์ */
-    }
-    td {
-        padding: 10px;
-    }
+    background-color: #68d38c; /* สีพื้นหลังของเซลล์ที่ 2 */
 }
